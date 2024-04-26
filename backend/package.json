@@ -1,23 +1,40 @@
 {
-  "name": "aua-backend",
-  "version": "0.0.1",
-  "main": "./lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "lint": "tslint -c tslint.json src/**/*.ts",
-    "prepublish": "npm run build"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "tslint": "^6.1.3",
-    "typescript": "^5.4.5"
-  },
-  "files": [
-    "./bin/*",
-    "./lib/*"
-  ],
-  "typings": "./lib/index.d.ts"
+    "name": "aua-backend",
+    "version": "0.0.1",
+    "repository": "https://github.com/filip326/aua",
+    "private": true,
+    "license": "GPL-3.0-only",
+    "type": "commonjs",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "zod": "^3.23.4"
+    },
+    "devDependencies": {
+        "@types/node": "^20.12.7",
+        "prettier": "^3.2.5",
+        "tsc": "^2.0.4",
+        "typescript": "^5.4.5"
+    },
+    "maintainers": [
+        {
+            "name": "Filip Lukas Paidar",
+            "url": "https://github.com/filip326"
+        },
+        {
+            "name": "Christian Fuchte",
+            "url": "https://github.com/Barsch2006"
+        }
+    ],
+    "files": [
+        "./bin/*",
+        "./dist/*"
+    ],
+    "typings": "./dist/index.d.ts"
 }

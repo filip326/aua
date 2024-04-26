@@ -1,2 +1,9 @@
 .env
+
 node_modules
+
+# output of all builds (frontend and backend)
+dist
+
+# any files that should not be pushed
+*.local.*
