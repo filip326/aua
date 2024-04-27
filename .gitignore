@@ -7,3 +7,6 @@ dist
 
 # any files that should not be pushed
 *.local.*
+
+# runtime logs
+logs
