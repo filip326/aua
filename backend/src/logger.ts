@@ -13,7 +13,9 @@ const FILE_DATE_FORMAT = "dd.MM" as const;
  * @example ```ts
  * const log = getLogger("myLogger");
  * log("DEBUG", "Hello World");
+ * log("INFO", "Hello World");
  * // Output: DEBUG [myLogger 27.04.2024 11:40:50] Hello World
+ * // Output: INFO [myLogger 27.04.2024 11:40:51] Hello World
  * ```
  */
 export default function getLogger(name: string): (level: LogLevel, message: string) => void {
