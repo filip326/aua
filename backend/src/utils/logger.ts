@@ -1,6 +1,6 @@
 import { appendFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { format } from "date-fns";
-import env from "./env";
+import env from "../env";
 import { join } from "node:path";
 
 type LogLevel = "LOG" | "DEBUG" | "INFO" | "WARN" | "ERROR";
