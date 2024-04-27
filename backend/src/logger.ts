@@ -4,9 +4,18 @@ import env from "./env";
 import { join } from "node:path";
 
 type LogLevel = "LOG" | "DEBUG" | "INFO" | "WARN" | "ERROR";
-const DATE_FORMAT = "dd MM yyyy HH:mm:ss" as const;
-const FILE_DATE_FORMAT = "dd yyyy MM" as const;
+const DATE_FORMAT = "dd.MM.yyyy HH:mm:ss" as const;
+const FILE_DATE_FORMAT = "dd.MM" as const;
 
+/**
+ * @param name the name of the logger to seperate the logs from different parts of the application
+ * @returns a closure that logs messages to a log-file and the console
+ * @example ```ts
+ * const log = getLogger("myLogger");
+ * log("DEBUG", "Hello World");
+ * // Output: DEBUG [myLogger 27.04.2024 11:40:50] Hello World
+ * ```
+ */
 export default function getLogger(name: string): (level: LogLevel, message: string) => void {
     if (!existsSync(env.LOG_DIR)) {
         mkdirSync(env.LOG_DIR, {
