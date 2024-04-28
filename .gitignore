@@ -1,12 +1,7 @@
 .env
-
 node_modules
-
-# output of all builds (frontend and backend)
 dist
+logs
 
 # any files that should not be pushed
 *.local.*
-
-# runtime logs
-logs
