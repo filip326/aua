@@ -23,3 +23,12 @@ export function internalServerError(res: Response): void {
 export function simpleOK(res: Response): void {
     res.status(200).send("OK");
 }
+
+export default {
+    badRequest,
+    unauthorized,
+    forbidden,
+    notFound,
+    internalServerError,
+    simpleOK,
+};
