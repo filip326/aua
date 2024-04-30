@@ -8,6 +8,6 @@ const envSchema = z.object({
     FRONTEND_URL: z.string(),
     X32_IP: z.string(),
     BEAMER_IP: z.string(),
-    SEND_ARTNET_AS_BROADCAST_ANYWAY: z.boolean().optional(),
+    SEND_ARTNET_AS_BROADCAST_ANYWAY: z.string().optional(),
 });
 export default envSchema.parse(process.env);

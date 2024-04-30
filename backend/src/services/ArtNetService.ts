@@ -8,8 +8,10 @@ class ArtNetService {
     // map of universe to ip address
     private static nodes: { [universe: number]: string };
 
-    public static getInstance(): ArtNetService {
-        if (!ArtNetService._instance) ArtNetService._instance = new ArtNetService(env.SEND_ARTNET_AS_BROADCAST_ANYWAY);
+    public static getInstance(
+        sendBroadcast: boolean = env.SEND_ARTNET_AS_BROADCAST_ANYWAY === "true" ?? false,
+    ): ArtNetService {
+        if (!ArtNetService._instance) ArtNetService._instance = new ArtNetService(sendBroadcast);
         return ArtNetService._instance;
     }
 
@@ -38,7 +40,15 @@ class ArtNetService {
         this.log("INFO", "ArtNetService initialized");
     }
 
-    public sendData(universe: number, data: Uint8ClampedArray) {
+    public sendData(
+        universe: number,
+        data: Uint8ClampedArray,
+        cb: (err: Error | null) => void = (err) => {
+            if (err) {
+                this.log("ERROR", `ArtNet-Service error: ${JSON.stringify(err)}`);
+            }
+        },
+    ) {
         const ip = ArtNetService.nodes[universe];
         if (!ip) {
             this.log("ERROR", `ArtNet-Node for universe ${universe} not found`);
@@ -49,10 +59,16 @@ class ArtNetService {
         const bufferedPackage = Buffer.from(artnetPackage);
 
         // TODO: send package to node
-        this.socket.send(bufferedPackage, 0, bufferedPackage.length, 6454, ip, (err) => {
-            if (err) {
-                this.log("ERROR", `ArtNet-Service error: ${JSON.stringify(err)}`);
-            }
+
+        this.socket.send(bufferedPackage, 0, bufferedPackage.length, 6454, ip, cb);
+    }
+
+    public sendDataAsync(universe: number, data: Uint8ClampedArray): Promise<void> {
+        return new Promise((resolve, reject) => {
+            this.sendData(universe, data, (err) => {
+                if (err) reject(err);
+                else resolve();
+            });
         });
     }
 
