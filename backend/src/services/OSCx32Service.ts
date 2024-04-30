@@ -54,6 +54,7 @@ class OSCx32Service {
     }
 
     public closeUDPSocket() {
+        this.log("INFO", "Closing OSC Socket");
         this.socket.close();
     }
 
