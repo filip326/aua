@@ -9,7 +9,7 @@ type X32Info = {
 };
 
 class OSCx32Service {
-    private static _instance: OSCx32Service;
+    private static _instance: OSCx32Service | null = null;
     public static getInstance(host: string = env.X32_IP): OSCx32Service {
         if (!OSCx32Service._instance) OSCx32Service._instance = new OSCx32Service(host);
         return OSCx32Service._instance;
@@ -56,6 +56,7 @@ class OSCx32Service {
     public closeUDPSocket() {
         this.log("INFO", "Closing OSC Socket");
         this.socket.close();
+        OSCx32Service._instance = null;
     }
 
     private log = getLogger("OSCx32Service");

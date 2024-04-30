@@ -4,9 +4,9 @@ import env from "../env";
 import buildArtNetPackage from "../utils/artnet";
 
 class ArtNetService {
-    private static _instance: ArtNetService;
+    private static _instance: ArtNetService | null = null;
     // map of universe to ip address
-    private static nodes: { [universe: number]: string };
+    private static nodes: { [universe: number]: string } = {};
 
     public static getInstance(
         sendBroadcast: boolean = env.SEND_ARTNET_AS_BROADCAST_ANYWAY === "true" ?? false,
@@ -30,12 +30,14 @@ class ArtNetService {
     private constructor(useBroadcast: boolean = false) {
         this.socket = dgram.createSocket({ type: "udp4" });
 
+        this.socket.bind(6454, () => {
+            if (useBroadcast) this.socket.setBroadcast(true);
+        });
+
         this.socket.on("error", (err) => {
             this.log("ERROR", `ArtNet-Service error: ${JSON.stringify(err)}`);
             this.socket.close();
         });
-
-        if (useBroadcast) this.socket.setBroadcast(true);
 
         this.log("INFO", "ArtNetService initialized");
     }
@@ -75,6 +77,7 @@ class ArtNetService {
     public closeSocket() {
         this.log("INFO", "Closing ArtNet Socket");
         this.socket.close();
+        ArtNetService._instance = null;
     }
 
     private log = getLogger("ArtNetService");
