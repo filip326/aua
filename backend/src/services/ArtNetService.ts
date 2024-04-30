@@ -5,6 +5,7 @@ import buildArtNetPackage from "../utils/artnet";
 
 class ArtNetService {
     private static _instance: ArtNetService;
+    // map of universe to ip address
     private static nodes: { [universe: number]: string };
 
     public static getInstance(): ArtNetService {
@@ -12,6 +13,12 @@ class ArtNetService {
         return ArtNetService._instance;
     }
 
+    /**
+     * Links a universe to the desired destination ip address (of the artnet-node listening on that universe)
+     * note: only one node/ ip address per universe is supported
+     * @param universe the universe of the node
+     * @param ip the ip address of the node
+     */
     public static addNode(universe: number, ip: string) {
         ArtNetService.nodes[universe] = ip;
     }

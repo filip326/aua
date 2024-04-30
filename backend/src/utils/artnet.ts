@@ -1,3 +1,9 @@
+/**
+ * Builds an artnet package with all the required headers and data
+ * @param universe the universe of the artnet package
+ * @param data all data to be sent/ packed into the artnet package
+ * @returns the artnet package as an array which just needs to be converted to a buffer before sending it
+ */
 export default function buildArtNetPackage(universe: number, data: Array<number>): Array<number> {
     let lenght = data.length;
 
