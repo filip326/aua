@@ -4,7 +4,7 @@ import cors from "cors";
 import http from "https";
 
 import env from "./env";
-import getLogger from "./logger";
+import getLogger from "./utils/logger";
 
 const app = express();
 const server = http.createServer(app); // make https on production
