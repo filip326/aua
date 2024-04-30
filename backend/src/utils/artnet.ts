@@ -23,7 +23,7 @@ export default function buildArtNetPackage(universe: number, data: Array<number>
 
     // Protocol Name, Version, Sequence, Universe, Data Length
     const artnetHeader = [65, 114, 116, 45, 78, 101, 116, 0, 0, 80, 0, 14, 0, 0, lUni, hUni, hLen, lLen];
-    const artnetPackage = artnetHeader.concat(data.slice(hLen * 256 + lLen));
+    const artnetPackage = artnetHeader.concat(data.slice(0, hLen * 256 + lLen));
 
     return artnetPackage;
 }
