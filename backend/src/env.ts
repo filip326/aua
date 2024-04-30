@@ -1,6 +1,4 @@
-import { config } from "dotenv";
 import { z } from "zod";
-config();
 
 const envSchema = z.object({
     LOG_DIR: z.string(),

@@ -7,7 +7,7 @@
     "main": "dist/index.js",
     "scripts": {
         "build": "tsc",
-        "start": "node dist/index.js",
+        "start": "node --env-file=.env dist/index.js",
         "format": "prettier --write .",
         "test": "jest"
     },
@@ -15,7 +15,6 @@
         "cookie-parser": "^1.4.6",
         "cors": "^2.8.5",
         "date-fns": "^3.6.0",
-        "dotenv": "^16.4.5",
         "express": "^4.19.2",
         "osc-min": "^1.1.2",
         "zod": "^3.23.4"
@@ -49,4 +48,3 @@
     ],
     "typings": "./dist/index.d.ts"
 }
-
