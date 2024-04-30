@@ -33,6 +33,8 @@ class OSCx32Service {
             this.sendOSC("/status");
             this.sendOSC("/xremote");
         }, 1000);
+
+        this.log("INFO", "OSCx32Service initialized");
     }
 
     public sendOSC(address: string, ...args: (string | number)[]) {
