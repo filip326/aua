@@ -9,8 +9,7 @@
         "build": "tsc",
         "start": "node --env-file=.env dist/index.js",
         "format": "prettier --write .",
-        "test": "jest",
-        "test-live": "jest --config=jest.live.config.ts"
+        "test": "jest"
     },
     "dependencies": {
         "cookie-parser": "^1.4.6",

@@ -7,7 +7,8 @@ const config: Config = {
     setupFilesAfterEnv: ["<rootDir>/test/setupTests.ts"],
     verbose: true,
     errorOnDeprecated: true,
-    testPathIgnorePatterns: ["\\\\node_modules\\\\", "\\\\dist\\\\", "\\\\src\\\\", "\\\\test/live-tests\\\\"],
+    testMatch: ["<rootDir>/test/**/*.test.ts"],
+    testPathIgnorePatterns: ["\\\\node_modules\\\\", "\\\\dist\\\\", "\\\\src\\\\"],
 };
 
 export default config;
