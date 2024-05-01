@@ -1,5 +1,6 @@
 {
-    "name": "aua-backend",
+    "name": "aua-frontend",
+    "description": "SinglePageApplication (SPA) in Vue",
     "version": "0.0.1",
     "repository": "https://github.com/filip326/aua",
     "private": true,
