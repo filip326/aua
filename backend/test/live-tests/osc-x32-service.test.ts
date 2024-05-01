@@ -1,4 +1,4 @@
-import OSCx32Service from "../src/services/OSCx32Service";
+import OSCx32Service from "../../src/services/OSCx32Service";
 
 describe("OSC X32 Service", () => {
     let x32: OSCx32Service;

@@ -1,4 +1,4 @@
-import ArtNetService from "../src/services/ArtNetService";
+import ArtNetService from "../../src/services/ArtNetService";
 
 describe("ArtnetService", () => {
     ArtNetService.addNode(0, "255.255.255.255");
