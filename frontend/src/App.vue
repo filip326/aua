@@ -2,6 +2,8 @@
 export default {};
 </script>
 
-<template></template>
+<template>
+    <VApp> </VApp>
+</template>
 
 <style></style>
