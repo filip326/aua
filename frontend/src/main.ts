@@ -6,5 +6,6 @@ import "vuetify/styles";
 import "@mdi/font/css/materialdesignicons.css";
 
 import "./styles/base.css";
+import router from "./plugins/router";
 
-createApp(App).use(vuetify).mount("#app");
+createApp(App).use(router).use(vuetify).mount("#app");
