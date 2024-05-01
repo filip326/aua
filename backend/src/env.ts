@@ -1,5 +1,6 @@
 import { z } from "zod";
 
+// process.env is a Record<string, string | undefined>
 const envSchema = z.object({
     LOG_DIR: z.string(),
     PORT: z.string(),
