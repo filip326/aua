@@ -3,7 +3,9 @@ export default {};
 </script>
 
 <template>
-    <VApp> </VApp>
+    <VApp>
+        <router-view></router-view>
+    </VApp>
 </template>
 
 <style></style>
