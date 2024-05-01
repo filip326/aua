@@ -60,8 +60,6 @@ class ArtNetService {
         const artnetPackage = buildArtNetPackage(universe, Array.from(data));
         const bufferedPackage = Buffer.from(artnetPackage);
 
-        // TODO: send package to node
-
         this.socket.send(bufferedPackage, 0, bufferedPackage.length, 6454, ip, cb);
     }
 
