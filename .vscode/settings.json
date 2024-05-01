@@ -1,0 +1,7 @@
+{
+    "git.openRepositoryInParentFolders": "always",
+    "git.branchProtection": ["master"],
+    "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
+    "git.allowForcePush": false,
+    "git.allowNoVerifyCommit": false
+}
