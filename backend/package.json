@@ -35,12 +35,12 @@
     },
     "maintainers": [
         {
-            "name": "Filip Lukas Paidar",
-            "url": "https://github.com/filip326"
-        },
-        {
             "name": "Christian Fuchte",
             "url": "https://github.com/Barsch2006"
+        },
+        {
+            "name": "Filip Lukas Paidar",
+            "url": "https://github.com/filip326"
         }
     ],
     "files": [

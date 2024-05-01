@@ -1,0 +1,8 @@
+.v-card-title,
+.v-card-subtitle {
+    white-space: normal !important;
+}
+
+.v-overlay__scrim {
+    background: rgba(0, 0, 0);
+}

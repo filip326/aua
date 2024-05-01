@@ -1,0 +1,35 @@
+{
+    "name": "aua-backend",
+    "version": "0.0.1",
+    "repository": "https://github.com/filip326/aua",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc && vite build",
+        "preview": "vite preview",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "@mdi/font": "^7.4.47",
+        "vue": "^3.4.21",
+        "vuetify": "^3.6.1"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^5.0.4",
+        "prettier": "^3.2.5",
+        "typescript": "^5.2.2",
+        "vite": "^5.2.0",
+        "vue-tsc": "^2.0.6"
+    },
+    "maintainers": [
+        {
+            "name": "Christian Fuchte",
+            "url": "https://github.com/Barsch2006"
+        },
+        {
+            "name": "Filip Lukas Paidar",
+            "url": "https://github.com/filip326"
+        }
+    ]
+}
