@@ -57,7 +57,7 @@ export default {
 
 <style scoped>
 .content__wrapper {
-    height: calc(100svh - 48px);
+    min-height: calc(100svh - 48px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
