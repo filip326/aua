@@ -6,7 +6,7 @@ export default createRouter({
         {
             path: "/pi",
             name: "Pi Display",
-            component: () => import("../pages/pi/Index.vue"),
+            component: () => import("../pages/pi/Main.vue"),
         },
     ],
 });
