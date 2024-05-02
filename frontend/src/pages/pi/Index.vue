@@ -32,7 +32,7 @@ export default {
                 </VCard>
 
                 <VCard class="centered_content_card" color="darker" variant="flat">
-                    <VCardTitle> Bild-Format </VCardTitle>
+                    <VCardTitle> Bildformat </VCardTitle>
                     <VCardItem>
                         <SquareIconBtn class="square_icon_btn" icon="mdi-monitor" text="16 / 9" textSize="14px" />
                         <SquareIconBtn class="square_icon_btn" icon="mdi-monitor-small" text="4 / 3" textSize="14px" />
