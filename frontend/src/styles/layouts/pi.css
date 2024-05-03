@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
-    gap: 20px;
+    gap: 0px 20px;
     padding: 20px;
     min-height: calc(100svh - 48px);
     width: 100%;
@@ -16,6 +16,7 @@
 .pi__content_wrapper > .centered_content_card {
     aspect-ratio: 370/252;
     width: max(320px, calc(50% - 10px));
+    height: auto;
     max-height: 50svh;
     position: relative;
 }
@@ -50,7 +51,7 @@
 }
 
 .pi__content_wrapper > .full_width_card {
-    flex-grow: 1 0;
+    flex-grow: 1;
     width: 100%;
     padding: 0px;
 }
@@ -67,11 +68,16 @@
 }
 
 @media screen and (max-width: 700px) {
+    .pi__content_wrapper {
+        gap: 20px;
+    }
+
     .pi__content_wrapper > .full_width_card,
     .pi__content_wrapper > .centered_content_card {
         width: min(320px, 70svw);
+        flex-grow: unset;
         max-height: none;
-        height: auto;
+        height: fit-content;
         aspect-ratio: unset;
         position: initial;
     }
