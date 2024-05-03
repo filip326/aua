@@ -29,7 +29,7 @@ class ArtNetService {
     private constructor(useBroadcast: boolean = false) {
         this.socket = dgram.createSocket({ type: "udp4" });
 
-        this.socket.bind(6454, () => {
+        this.socket.bind(6454, "127.0.0.1", () => {
             if (useBroadcast) this.socket.setBroadcast(true);
         });
 
