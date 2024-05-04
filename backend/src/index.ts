@@ -16,6 +16,9 @@ const mainLogger = getLogger("main");
     app.use(
         cors({
             origin: env.FRONTEND_URL,
+            methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+            optionsSuccessStatus: 204,
+            allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Accept", "Origin"],
         }),
     );
     app.use(express.json());
