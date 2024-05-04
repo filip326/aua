@@ -1,7 +1,7 @@
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import http from "https";
+import http from "http";
 
 import env from "./env";
 import getLogger from "./utils/logger";
