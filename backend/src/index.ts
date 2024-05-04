@@ -6,6 +6,8 @@ import http from "https";
 import env from "./env";
 import getLogger from "./utils/logger";
 
+import beamerHandler from "./api/routes/beamer";
+
 const app = express();
 const server = http.createServer(app); // make https on production
 const mainLogger = getLogger("main");
@@ -19,7 +21,7 @@ const mainLogger = getLogger("main");
     app.use(express.json());
     app.use(cookieParser());
 
-    // TODO: Add http endpoint handlers here
+    app.use(beamerHandler());
 
     server.listen(env.PORT, () => {
         mainLogger("INFO", `Server is running on port ${env.PORT}`);
