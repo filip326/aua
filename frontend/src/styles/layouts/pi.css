@@ -41,11 +41,7 @@
     aspect-ratio: 1/1;
 }
 
-.pi__content_wrapper
-    > .centered_content_card
-    > .v-card-item
-    > .v-card-item__content
-    > .square_icon_btn:only-child {
+.pi__content_wrapper > .centered_content_card > .v-card-item > .v-card-item__content > .square_icon_btn:only-child {
     margin-left: auto;
     margin-right: auto;
 }
