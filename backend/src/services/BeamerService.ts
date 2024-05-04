@@ -33,20 +33,21 @@ class BeamerService {
         );
     }
 
-    // TODO @filip326
-    /* private _sendRs232Command(command: string) {
-        const request = new HttpV1_0_Request();
-        request.method = "POST";
-        request.host = this.url;
-        request.path = "/cgi-bin/MMX32_Keyvalue.cgi";
-        request.body = `{CMD=>${command}\r\n`;
-    } */
+    public async sendRS232Command(cmd: string) {
+        return await this.sendRequest({
+            method: "POST",
+            path: "/cgi-bin/MMX32_Keyvalue.cgi",
+            body: `{CMD=>${cmd}\r\n`,
+            headers: {},
+        });
+    }
 
-    public async sendRequest(req: BeamerRequest): Promise<ParsedBeamerReponse> {
+    public async sendRequest(conf: Omit<Omit<BeamerRequest, "host">, "port">): Promise<ParsedBeamerReponse> {
         this.initializeTCP();
-        req.host = this.host;
-        req.port = this.port;
+
+        let req: BeamerRequest = { ...conf, host: this.host, port: this.port };
         req.headers["Connection"] = "close";
+
         return new Promise((resolve, reject) => {
             const timeout = setTimeout(() => {
                 this.tcpClient.off("data", onData);
