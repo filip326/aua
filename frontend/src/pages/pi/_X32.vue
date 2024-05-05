@@ -1,10 +1,8 @@
 <script lang="ts">
-import SquareIconBtn from "../../components/SquareIconBtn.vue";
 import PiLayout from "../../layouts/PiLayout.vue";
 
 export default {
     components: {
-        SquareIconBtn,
         PiLayout,
     },
     data() {
@@ -70,7 +68,7 @@ export default {
                     <VBtn rounded="0" width="64px" height="42px" variant="flat" icon="mdi-volume-minus" />
                 </div>
                 <div class="channel has-icon">
-                    <VIcon style="margin-bottom: 2px">mdi-volume-vibrate</VIcon>
+                    <VIcon style="margin-bottom: 2px">mdi-surround-sound</VIcon>
                     <VBtn rounded="0" width="64px" height="42px" variant="flat" icon="mdi-volume-off" />
                     <VBtn rounded="0" width="64px" height="42px" variant="flat" icon="mdi-volume-plus" />
                     <VBtn rounded="0" width="64px" height="42px" variant="flat" icon="mdi-volume-minus" />
