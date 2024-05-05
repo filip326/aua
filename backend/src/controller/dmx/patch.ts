@@ -3,7 +3,7 @@
  * 2x MHZ1915
  * 2x REVUELED
  * 2x CWWW
- * 24x Single Channel/ Dimmer
+ * 24x Single Channel/ Dimmer (first 24 channels)
  * 6x PAR64 Stage
  * 5x W648
  * 4x PAR64 Front
