@@ -5,7 +5,7 @@ import BeamerController from "../../controller/BeamerController";
 export default function (): Router {
     const app = Router();
 
-    app.post("/power/on", async (req, res) => {
+    app.post("/beamer/power/on", async (req, res) => {
         try {
             await BeamerController.powerOn();
             res.status(200).send();
@@ -15,7 +15,7 @@ export default function (): Router {
         }
     });
 
-    app.post("/power/off", async (req, res) => {
+    app.post("/beamer/power/off", async (req, res) => {
         try {
             await BeamerController.powerOff();
             res.status(200).send();
@@ -25,7 +25,7 @@ export default function (): Router {
         }
     });
 
-    app.post("/format/16:9", async (req, res) => {
+    app.post("/beamer/format/16:9", async (req, res) => {
         try {
             await BeamerController.imageFormat_16to9();
             res.status(200).send();
@@ -35,7 +35,7 @@ export default function (): Router {
         }
     });
 
-    app.post("/format/4:3", async (req, res) => {
+    app.post("/beamer/format/4:3", async (req, res) => {
         try {
             await BeamerController.imageFormat_4to3();
             res.status(200).send();
@@ -45,7 +45,7 @@ export default function (): Router {
         }
     });
 
-    app.post("/src/stage_left", async (req, res) => {
+    app.post("/beamer/src/stage_left", async (req, res) => {
         try {
             await BeamerController.source_stageLeft();
             res.status(200).send();
@@ -55,7 +55,7 @@ export default function (): Router {
         }
     });
 
-    app.post("/src/regie", async (req, res) => {
+    app.post("/beamer/src/regie", async (req, res) => {
         try {
             await BeamerController.source_regie();
             res.status(200).send();
