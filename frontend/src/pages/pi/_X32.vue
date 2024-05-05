@@ -10,10 +10,10 @@ export default {
         async loadDefault() {
             await X32.loadSceneDefault();
         },
-        async channelPlus(channel: string) {
+        async channelPlus(channel: "m1" | "m2" | "m3" | "h1" | "bluetooth" | "beamer" | "sub") {
             await X32.faderPlus(channel);
         },
-        async channelMinus(channel: string) {
+        async channelMinus(channel: "m1" | "m2" | "m3" | "h1" | "bluetooth" | "beamer" | "sub") {
             await X32.faderMinus(channel);
         },
         async channelMute(channel: string) {
