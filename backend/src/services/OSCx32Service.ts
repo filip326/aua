@@ -27,8 +27,6 @@ class OSCx32Service {
             this.socket.close();
         });
 
-        // TODO: add message handlers
-
         setInterval(() => {
             this.sendOSC("/status");
             this.sendOSC("/xremote");

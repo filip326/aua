@@ -29,7 +29,7 @@ class ArtNetService {
     private constructor(useBroadcast: boolean = false) {
         this.socket = dgram.createSocket({ type: "udp4" });
 
-        this.socket.bind(6454, "127.0.0.1", () => {
+        this.socket.bind(6454, "0.0.0.0", () => {
             if (useBroadcast) this.socket.setBroadcast(true);
         });
 
@@ -40,6 +40,15 @@ class ArtNetService {
 
         this.log("INFO", "ArtNetService initialized");
     }
+
+    /* 
+    I need to experiment with this, but I think it's not necessary in the first place
+    private onMessage: (msg: Buffer, rinfo: dgram.RemoteInfo) => void = () => {};
+    public setIncommingHandler(onMessage: (msg: Buffer, rinfo: dgram.RemoteInfo) => void) {
+        this.onMessage = onMessage;
+        this.socket.on("message", onMessage);
+    } 
+    */
 
     /**
      * Builds an artnet package with all the required headers and data
