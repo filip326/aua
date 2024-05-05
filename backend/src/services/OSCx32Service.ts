@@ -15,7 +15,7 @@ class OSCx32Service {
         return OSCx32Service._instance;
     }
 
-    private socket: dgram.Socket;
+    public socket: dgram.Socket;
     private x32_info: X32Info;
     private constructor(host: string, port: number = 10023) {
         this.x32_info = { host, port };

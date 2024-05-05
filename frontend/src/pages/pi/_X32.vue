@@ -61,12 +61,7 @@ export default {
                     <VBtn rounded="0" width="64px" height="42px" variant="flat" icon="mdi-volume-plus" />
                     <VBtn rounded="0" width="64px" height="42px" variant="flat" icon="mdi-volume-minus" />
                 </div>
-                <div class="channel has-icon">
-                    <VIcon style="margin-bottom: 2px">mdi-audio-input-stereo-minijack</VIcon>
-                    <VBtn rounded="0" width="64px" height="42px" variant="flat" icon="mdi-volume-off" />
-                    <VBtn rounded="0" width="64px" height="42px" variant="flat" icon="mdi-volume-plus" />
-                    <VBtn rounded="0" width="64px" height="42px" variant="flat" icon="mdi-volume-minus" />
-                </div>
+                <div class="channel"></div>
                 <div class="channel has-icon">
                     <VIcon style="margin-bottom: 2px">mdi-surround-sound</VIcon>
                     <VBtn rounded="0" width="64px" height="42px" variant="flat" icon="mdi-volume-off" />
@@ -95,6 +90,7 @@ export default {
     flex-direction: column;
     padding-top: 1px;
     flex: 0 1 calc(50% - 12px);
+    width: 82.5px;
 }
 
 .channel.has-icon {
