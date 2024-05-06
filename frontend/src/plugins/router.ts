@@ -4,9 +4,9 @@ export default createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: "/pi",
+            path: "/",
             name: "Pi Display",
-            component: () => import("../pages/pi/Main.vue"),
+            component: () => import("../pages/Main.vue"),
         },
     ],
 });

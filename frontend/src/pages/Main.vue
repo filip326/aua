@@ -45,7 +45,18 @@ export default {
         </VTab>
     </VTabs>
 
-    <VWindow v-model="tab">
+    <VWindow
+        :touch="{
+            left: () => {},
+            right: () => {},
+            up: () => {},
+            down: () => {},
+            move: () => {},
+            start: () => {},
+            end: () => {},
+        }"
+        v-model="tab"
+    >
         <VWindowItem value="beamer">
             <SubviewBeamer />
         </VWindowItem>

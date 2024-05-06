@@ -1,11 +1,11 @@
 <script lang="ts">
-import "../styles/layouts/pi.css";
+import "../styles/layouts/three-card.css";
 
 export default {};
 </script>
 
 <template>
-    <div class="pi__content_wrapper">
+    <div class="three_card__wrapper">
         <VCard class="centered_content_card" color="darker" variant="flat">
             <slot name="vcard_left" />
         </VCard>

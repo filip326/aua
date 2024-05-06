@@ -1,12 +1,12 @@
 <script lang="ts">
-import SquareIconBtn from "../../components/SquareIconBtn.vue";
-import PiLayout from "../../layouts/PiLayout.vue";
-import DMX from "../../controller/DMX";
+import SquareIconBtn from "../components/SquareIconBtn.vue";
+import Layout from "../layouts/ThreeCardLayout.vue";
+import DMX from "../controller/DMX";
 
 export default {
     components: {
         SquareIconBtn,
-        PiLayout,
+        Layout,
     },
     methods: {
         async stageWW() {
@@ -59,7 +59,7 @@ export default {
 </script>
 
 <template>
-    <PiLayout>
+    <Layout>
         <template #vcard_left>
             <VCardTitle> Theater </VCardTitle>
             <VCardItem class="grid3x2">
@@ -164,5 +164,5 @@ export default {
                 <VBtn @click="allOff" variant="flat" width="200px" height="42px">Anlage Aus</VBtn>
             </VCardItem>
         </template>
-    </PiLayout>
+    </Layout>
 </template>

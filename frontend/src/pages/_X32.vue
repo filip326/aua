@@ -1,10 +1,10 @@
 <script lang="ts">
-import X32 from "../../controller/X32";
-import PiLayout from "../../layouts/PiLayout.vue";
+import X32 from "../controller/X32";
+import Layout from "../layouts/ThreeCardLayout.vue";
 
 export default {
     components: {
-        PiLayout,
+        Layout,
     },
     methods: {
         async loadDefault() {
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-    <PiLayout>
+    <Layout>
         <template #vcard_left>
             <VCardTitle> Mikrofone </VCardTitle>
             <VCardItem>
@@ -233,7 +233,7 @@ export default {
                 <VBtn @click="loadDefault()" variant="flat" width="200px" height="42px">Default</VBtn>
             </VCardItem>
         </template>
-    </PiLayout>
+    </Layout>
 </template>
 
 <style scoped>
