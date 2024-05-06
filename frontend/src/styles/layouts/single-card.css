@@ -51,7 +51,7 @@
 
     .single_card__wrapper > .full_width_card,
     .single_card__wrapper > .centered_content_card {
-        width: min(320px, 70svw);
+        width: max(320px, 100svw - 20px);
         flex-grow: unset;
         max-height: none;
         height: fit-content;

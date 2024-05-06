@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
-    gap: 0px 20px;
+    gap: 20px 20px;
     padding: 20px;
     min-height: calc(100svh - 48px);
     width: 100%;
@@ -17,7 +17,7 @@
     aspect-ratio: 370/252;
     width: max(320px, calc(50% - 10px));
     height: auto;
-    max-height: 50svh;
+    max-height: 70svh;
     position: relative;
 }
 
@@ -137,7 +137,7 @@
 
     .three_card__wrapper > .full_width_card,
     .three_card__wrapper > .centered_content_card {
-        width: min(320px, 70svw);
+        width: max(320px, 100svw - 20px);
         flex-grow: unset;
         max-height: none;
         height: fit-content;
