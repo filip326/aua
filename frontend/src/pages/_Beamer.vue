@@ -23,8 +23,8 @@ export default {
     <Layout>
         <VCardTitle> An/ Aus</VCardTitle>
         <VCardItem>
-            <SquareIconBtn @click="powerOn" class="square_icon_btn" icon="mdi-projector" text="Beamer an" />
-            <SquareIconBtn @click="powerOff" class="square_icon_btn" icon="mdi-projector-off" text="Beamer aus" />
+            <SquareIconBtn @click="powerOn" iconSize="64px" class="square_icon_btn" icon="mdi-projector" text="Beamer an" />
+            <SquareIconBtn @click="powerOff" iconSize="64px" class="square_icon_btn" icon="mdi-projector-off" text="Beamer aus" />
         </VCardItem>
     </Layout>
 </template>
