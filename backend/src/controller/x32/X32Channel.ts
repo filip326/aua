@@ -25,7 +25,7 @@ export default class X32Channel {
                 if (msg.address.startsWith(`/ch/${this.channel}`)) {
                     switch (msg.address) {
                         case `/ch/${this.channel}/mix/on`:
-                            this.mix_on = this.getValue(msg) as "ON" | "OFF";
+                            this.mix_on = this.getValue(msg) === 1 ? "ON" : "OFF";
                             return;
                         case `/ch/${this.channel}/mix/fader`:
                             this.mix_fader = this.getValue(msg) as number;
