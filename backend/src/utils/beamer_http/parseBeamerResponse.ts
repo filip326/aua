@@ -42,8 +42,11 @@ function parseHeader(header: string[]): {
     parsedHeaders.httpVersion = statusLine[0];
     parsedHeaders.statusCode = parseInt(statusLine[1]);
     parsedHeaders.statusMessage = statusLine[2];
+    parsedHeaders.header = {};
     header.forEach((header) => {
+        if (!header || header === "") return;
         let splitedHeader = header.split(": ");
+        console.log(splitedHeader)
         parsedHeaders.header[splitedHeader[0]] = splitedHeader[1];
     });
 

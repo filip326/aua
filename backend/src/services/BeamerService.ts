@@ -33,11 +33,14 @@ class BeamerService {
         );
     }
 
+    /**
+     * ! specify cmd without > prefix and \r\n suffix
+     */
     public async sendRS232Command(cmd: string) {
         return await this.sendRequest({
             method: "POST",
             path: "/cgi-bin/MMX32_Keyvalue.cgi",
-            body: `{CMD=>${cmd}\r\n`,
+            body: `{CMD=>${cmd}`,
             headers: {},
         });
     }
