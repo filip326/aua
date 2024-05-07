@@ -85,7 +85,7 @@ export default {
         <template #vcard_bottom>
             <VCardTitle> Scenen </VCardTitle>
             <VCardItem>
-                <VBtn @click="loadDefault()" variant="flat" width="200px" height="42px">Default</VBtn>
+                <VBtn @click="loadDefault()" variant="flat" width="200px" height="48px">Default</VBtn>
             </VCardItem>
         </template>
     </Layout>

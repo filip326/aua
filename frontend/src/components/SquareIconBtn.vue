@@ -34,6 +34,7 @@ export default {
     bottom: 10px;
     left: 0;
     width: 100%;
+    padding: 0 10px;
     text-align: center;
 }
 

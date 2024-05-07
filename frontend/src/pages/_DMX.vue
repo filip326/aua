@@ -159,9 +159,9 @@ export default {
         <template #vcard_bottom>
             <VCardTitle> Master </VCardTitle>
             <VCardItem>
-                <VBtn @click="allOn" variant="flat" width="200px" height="42px">Anlage An</VBtn>
-                <VBtn @click="clearActive" variant="flat" width="200px" height="42px">Clear Active</VBtn>
-                <VBtn @click="allOff" variant="flat" width="200px" height="42px">Anlage Aus</VBtn>
+                <VBtn @click="allOn" variant="flat" width="200px" height="48px">Anlage An</VBtn>
+                <VBtn @click="clearActive" variant="flat" width="200px" height="48px">Clear Active</VBtn>
+                <VBtn @click="allOff" variant="flat" width="200px" height="48px">Anlage Aus</VBtn>
             </VCardItem>
         </template>
     </Layout>

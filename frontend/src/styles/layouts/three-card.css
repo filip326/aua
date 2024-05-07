@@ -3,8 +3,8 @@
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
-    gap: 20px 20px;
-    padding: 20px;
+    gap: 10px;
+    padding: 10px;
     min-height: calc(100svh - 48px);
     width: 100%;
 }
@@ -15,7 +15,7 @@
 
 .three_card__wrapper > .centered_content_card {
     aspect-ratio: 370/252;
-    width: max(320px, calc(50% - 10px));
+    width: max(320px, calc(50% - 5px));
     height: auto;
     max-height: 70svh;
     position: relative;
@@ -23,20 +23,20 @@
 
 .three_card__wrapper > .centered_content_card > .v-card-item {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     width: 100%;
     padding: 0;
 }
 
 .three_card__wrapper > .centered_content_card > .v-card-item > .v-card-item__content {
     width: 100%;
-    padding: 0px 20px;
+    padding: 0px 10px;
     display: flex;
     justify-content: space-between;
 }
 
 .three_card__wrapper > .centered_content_card > .v-card-item > .v-card-item__content > .square_icon_btn {
-    width: min(300px, calc(50svh - 68px), max(130px, calc(50% - 10px)));
+    width: min(300px, calc(50svh - 68px), max(130px, calc(50% - 5px)));
     height: auto;
     aspect-ratio: 1/1;
 }
@@ -48,14 +48,14 @@
 
 .three_card__wrapper > .centered_content_card > .v-card-item.grid3x2 > .v-card-item__content {
     display: grid;
-    padding: 0px 20px;
+    padding: 0px 10px;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px 5px;
+    gap: 10px 5px;
     justify-content: space-between;
 }
 
 .three_card__wrapper > .centered_content_card > .v-card-item.grid3x2 > .v-card-item__content > .square_icon_btn {
-    width: min(300px, calc((50svh - 88px) / 2), max(130px, calc(50% - 10px)));
+    width: 80%;
     height: auto;
     aspect-ratio: 1/1;
 }
@@ -106,10 +106,14 @@
     padding: 0px;
 }
 
+.three_card__wrapper > .full_width_card > .v-card-item {
+    padding: 0 !important;
+}
+
 .three_card__wrapper > .full_width_card > .v-card-item > .v-card-item__content {
     display: flex;
     justify-content: center;
-    gap: 10px 20px;
+    gap: 10px 10px;
     flex-wrap: wrap;
 }
 
@@ -132,12 +136,12 @@
 
 @media screen and (max-width: 700px) {
     .three_card__wrapper {
-        gap: 20px;
+        gap: 10px;
     }
 
     .three_card__wrapper > .full_width_card,
     .three_card__wrapper > .centered_content_card {
-        width: max(320px, 100svw - 20px);
+        width: max(320px, 100svw - 10px);
         flex-grow: unset;
         max-height: none;
         height: fit-content;
@@ -153,7 +157,7 @@
 
     .three_card__wrapper > .centered_content_card > .v-card-item {
         position: initial;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
 }
 
