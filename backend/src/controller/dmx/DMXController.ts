@@ -1,4 +1,5 @@
 import ArtNetService from "../../services/ArtNetService";
+import PATCH from "./patch";
 // import PATCH from "./patch";
 
 class DMXController {
@@ -32,17 +33,35 @@ class DMXController {
     }
 
     stageWW(): Promise<void> {
-        // TODO
+        this.data[PATCH.CWWW_L_DIMMER] = 255;
+        this.data[PATCH.CWWW_R_DIMMER] = 255;
+        this.data[PATCH.CWWW_L_WW] = 255;
+        this.data[PATCH.CWWW_R_WW] = 255;
+        this.data[PATCH.CWWW_L_STROBE] = 0;
+        this.data[PATCH.CWWW_R_STROBE] = 0;
+        this.data[PATCH.CWWW_L_COLOR_TEMP] = 0;
+        this.data[PATCH.CWWW_R_COLOR_TEMP] = 0;
         return ArtNetService.getInstance().sendDataAsync(0, this.data);
     }
 
     stageCW(): Promise<void> {
-        // TODO
+        this.data[PATCH.CWWW_L_DIMMER] = 255;
+        this.data[PATCH.CWWW_R_DIMMER] = 255;
+        this.data[PATCH.CWWW_L_CW] = 255;
+        this.data[PATCH.CWWW_R_CW] = 255;
+        this.data[PATCH.CWWW_L_STROBE] = 0;
+        this.data[PATCH.CWWW_R_STROBE] = 0;
+        this.data[PATCH.CWWW_L_COLOR_TEMP] = 0;
+        this.data[PATCH.CWWW_R_COLOR_TEMP] = 0;
         return ArtNetService.getInstance().sendDataAsync(0, this.data);
     }
 
     stageOff(): Promise<void> {
-        // TODO
+        Object.keys(PATCH).forEach((key) => {
+            if (["PAR64", "W648", "CWWW"].includes(key)) {
+                this.data[PATCH[key as keyof typeof PATCH]] = 0;
+            }
+        });
         return ArtNetService.getInstance().sendDataAsync(0, this.data);
     }
 
@@ -62,7 +81,10 @@ class DMXController {
     }
 
     spotLeft(): Promise<void> {
-        // TODO
+        this.data[PATCH.REVUELED_L_DIMMER] = 255;
+        this.data[PATCH.REVUELED_R_DIMMER] = 255;
+        this.data[PATCH.REVUELED_L_STROBE] = 0;
+        this.data[PATCH.REVUELED_R_STROBE] = 0;
         return ArtNetService.getInstance().sendDataAsync(0, this.data);
     }
 
@@ -72,7 +94,11 @@ class DMXController {
     }
 
     spotOff(): Promise<void> {
-        // TODO
+        this.data[PATCH.REVUELED_L_DIMMER] = 0;
+        this.data[PATCH.REVUELED_R_DIMMER] = 0;
+        this.data[PATCH.REVUELED_L_STROBE] = 0;
+        this.data[PATCH.REVUELED_R_STROBE] = 0;
+        // todo: add MHx200
         return ArtNetService.getInstance().sendDataAsync(0, this.data);
     }
 
