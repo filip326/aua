@@ -112,7 +112,7 @@
 
 .three_card__wrapper > .full_width_card > .v-card-item > .v-card-item__content {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 10px 10px;
     flex-wrap: wrap;
 }
