@@ -9,4 +9,5 @@ const envSchema = z.object({
     BEAMER_IP: z.string(),
     SEND_ARTNET_AS_BROADCAST_ANYWAY: z.string().optional(),
 });
+
 export default envSchema.parse(process.env);

@@ -7,7 +7,7 @@
         "rootDir": "./src",
         "moduleResolution": "NodeNext",
         "typeRoots": ["node_modules/@types", "typings"],
-        "types": ["node", "jest"],
+        "types": ["node"],
 
         "declaration": true,
         "outDir": "dist",

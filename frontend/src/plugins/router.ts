@@ -5,8 +5,8 @@ export default createRouter({
     routes: [
         {
             path: "/",
-            name: "Home",
-            component: () => import("../pages/Home.vue"),
-        }
+            name: "Pi Display",
+            component: () => import("../pages/Main.vue"),
+        },
     ],
 });

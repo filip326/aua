@@ -28,6 +28,7 @@ export default createVuetify({
                     error: "#b40000", // red
                     info: "#0088cc", // light blue
                     warning: "#ff5500", // deep orange
+                    darker: "#1c1c1c", // grey
                 },
             },
         },

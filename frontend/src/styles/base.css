@@ -3,6 +3,10 @@
     white-space: normal !important;
 }
 
+.v-card-title {
+    user-select: none;
+}
+
 .v-overlay__scrim {
     background: rgba(0, 0, 0, 0);
 }
