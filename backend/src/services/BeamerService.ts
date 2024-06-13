@@ -2,10 +2,13 @@
 import env from "../env";
 import net from "node:net";
 import getLogger from "../utils/logger";
-import TcpService from "./TcpService";
+import BeamerTcpService from "./BeamerTcpService";
 
 class BeamerService {
     private static _instance: BeamerService | null = null;
+
+    private tcpService: BeamerTcpService = new BeamerTcpService(env.BEAMER_IP, 80);
+
     public static getInstance(ip: string = env.BEAMER_IP): BeamerService {
         if (!BeamerService._instance) BeamerService._instance = new BeamerService();
         return BeamerService._instance;
@@ -19,9 +22,8 @@ class BeamerService {
      * ! specify cmd without > prefix and \r\n suffix
      */
     public async sendRS232Command(cmd: string) {
-        const tcpService = new TcpService(env.BEAMER_IP, 80);
 
-        return await tcpService.sendRequest({
+        return await this.tcpService.sendRequest({
             method: "POST",
             path: "/cgi-bin/MMX32_Keyvalue.cgi",
             body: `{CMD=>${cmd}`,

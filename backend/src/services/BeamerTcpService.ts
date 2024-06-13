@@ -4,7 +4,7 @@ import getLogger from "../utils/logger";
 import { parseBeamerReponse, ParsedBeamerReponse } from "../utils/beamer_http/parseBeamerResponse";
 import { BeamerRequest, buildRequestPackage } from "../utils/beamer_http/buildRequestPackage";
 
-class TcpService {
+class BeamerTcpService {
     private host: string;
     private port: number;
     private tcpClient: net.Socket = new net.Socket();
@@ -85,4 +85,4 @@ class TcpService {
     private log = getLogger("TcpService");
 }
 
-export default TcpService;
+export default BeamerTcpService;
