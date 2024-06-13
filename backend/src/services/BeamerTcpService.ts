@@ -1,4 +1,3 @@
-import env from "../env";
 import net from "node:net";
 import getLogger from "../utils/logger";
 import { parseBeamerReponse, ParsedBeamerReponse } from "../utils/beamer_http/parseBeamerResponse";
