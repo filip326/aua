@@ -41,6 +41,15 @@ class ArtNetService {
         this.log("INFO", "ArtNetService initialized");
     }
 
+    /* 
+    I need to experiment with this, but I think it's not necessary in the first place
+    private onMessage: (msg: Buffer, rinfo: dgram.RemoteInfo) => void = () => {};
+    public setIncommingHandler(onMessage: (msg: Buffer, rinfo: dgram.RemoteInfo) => void) {
+        this.onMessage = onMessage;
+        this.socket.on("message", onMessage);
+    } 
+    */
+
     /**
      * Builds an artnet package with all the required headers and data
      * @param universe the universe of the artnet package

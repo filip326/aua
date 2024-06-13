@@ -1,0 +1,100 @@
+.single_card__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0px 10px;
+    padding: 10px;
+    min-height: calc(100svh - 48px);
+    width: 100%;
+}
+
+.single_card__wrapper .v-card-title {
+    text-align: center;
+}
+
+.single_card__wrapper > .centered_content_card {
+    width: 100%;
+    height: calc(100svh - 68px);
+    position: relative;
+}
+
+.single_card__wrapper > .centered_content_card > .v-card-item {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    padding: 0;
+}
+
+.single_card__wrapper > .centered_content_card > .v-card-item > .v-card-item__content {
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.single_card__wrapper > .centered_content_card > .v-card-item > .v-card-item__content > .square_icon_btn {
+    width: min(300px, calc(100svh - 68px), max(130px, calc(100% - 10px)));
+    height: auto;
+    aspect-ratio: 1/1;
+}
+
+.single_card__wrapper > .centered_content_card > .v-card-item > .v-card-item__content > .square_icon_btn:only-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 700px) {
+    .single_card__wrapper {
+        gap: 10px;
+    }
+
+    .single_card__wrapper > .full_width_card,
+    .single_card__wrapper > .centered_content_card {
+        width: max(320px, 100svw - 10px);
+        flex-grow: unset;
+        max-height: none;
+        height: fit-content;
+        aspect-ratio: unset;
+        position: initial;
+    }
+
+    .single_card__wrapper > .centered_content_card > .v-card-item > .v-card-item__content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .single_card__wrapper > .centered_content_card > .v-card-item {
+        position: initial;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .single_card__wrapper
+        > .centered_content_card
+        > .v-card-item.grid3x2
+        > .v-card-item__content
+        > .square_icon_btn
+        .square_icon_btn__text {
+        bottom: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        white-space: normal !important;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .single_card__wrapper
+        > .centered_content_card
+        > .v-card-item.grid3x2
+        > .v-card-item__content
+        > .square_icon_btn
+        .v-icon {
+        opacity: 0;
+    }
+}
