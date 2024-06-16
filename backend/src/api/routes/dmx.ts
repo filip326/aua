@@ -1,4 +1,4 @@
-import { Router } from "express";
+/* import { Router } from "express";
 import DMXController from "../../controller/dmx/DMXController";
 import getLogger from "../../utils/logger";
 
@@ -159,3 +159,4 @@ export default function (): Router {
 
     return app;
 }
+ */

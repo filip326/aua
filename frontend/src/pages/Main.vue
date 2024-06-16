@@ -1,13 +1,11 @@
 <script lang="ts">
 import SubviewBeamer from "./_Beamer.vue";
 import SubviewX32 from "./_X32.vue";
-import SubviewDMX from "./_DMX.vue";
 
 export default {
     components: {
         SubviewBeamer,
         SubviewX32,
-        SubviewDMX,
     },
     data() {
         return {
@@ -35,10 +33,6 @@ export default {
             <VIcon size="24px" v-if="mobile">mdi-projector</VIcon>
             <span v-else>Beamer</span>
         </VTab>
-        <VTab value="dmx">
-            <VIcon size="24px" v-if="mobile">mdi-track-light</VIcon>
-            <span v-else>Licht</span>
-        </VTab>
         <VTab value="sound">
             <VIcon size="24px" v-if="mobile">mdi-volume-high</VIcon>
             <span v-else>Ton</span>
@@ -59,9 +53,6 @@ export default {
     >
         <VWindowItem value="beamer">
             <SubviewBeamer />
-        </VWindowItem>
-        <VWindowItem value="dmx">
-            <SubviewDMX />
         </VWindowItem>
         <VWindowItem value="sound">
             <SubviewX32 />
