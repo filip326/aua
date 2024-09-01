@@ -1,4 +1,4 @@
-import ArtNetService from "../../services/ArtNetService";
+/* import ArtNetService from "../../services/ArtNetService";
 import PATCH from "./patch";
 // import PATCH from "./patch";
 
@@ -119,3 +119,4 @@ class DMXController {
 }
 
 export default DMXController;
+ */

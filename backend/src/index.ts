@@ -8,7 +8,7 @@ import getLogger from "./utils/logger";
 
 import beamerHandler from "./api/routes/beamer";
 import x32Handler from "./api/routes/x32";
-import dmxHandler from "./api/routes/dmx";
+// import dmxHandler from "./api/routes/dmx";
 
 const app = express();
 const server = http.createServer(app); // make https on production
@@ -28,7 +28,7 @@ const mainLogger = getLogger("main");
 
     app.use(beamerHandler());
     app.use(x32Handler());
-    app.use(dmxHandler());
+    // app.use(dmxHandler());
 
     server.listen(env.PORT, () => {
         mainLogger("INFO", `Server is running on port ${env.PORT}`);

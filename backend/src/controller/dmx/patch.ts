@@ -8,6 +8,7 @@
  * 5x W648
  * 4x PAR64 Front
  */
+/*
 const PATCH = {
     SINGLECHANNEL_1: 0,
     SINGLECHANNEL_2: 1,
@@ -243,3 +244,4 @@ const PATCH = {
 } as const;
 
 export default PATCH;
+ */
